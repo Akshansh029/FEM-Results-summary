@@ -8,19 +8,20 @@
 body{
     background: white;
     display: grid;
-    justify-content: center;
-    align-items: center;
+    place-items: center;
     font-family: 'Hanken Grotesk', sans-serif;
 }
-.results-summary{
+
+.results-summary {
     height: 55vh;
     width: 40vw;
-    margin-top: 10rem;
+    margin-top: 9rem;
     display: flex;
+    /* flex-direction: column; */
     border-radius: 20px;
     box-shadow: 0px 0px 30px 0px hsl(241, 100%, 89%);
 }
-.results{
+.results {
     width: 50%;
     padding: 2rem;
     display: flex;
@@ -28,42 +29,48 @@ body{
     justify-content: center;
     align-items: center;
     gap: 15px;
-    background: linear-gradient(to top, hsl(241, 81%, 54%),hsl(252, 100%, 67%));
+    background: linear-gradient(to top, hsl(241, 81%, 54%), hsl(252, 100%, 67%));
     color: white;
     border-radius: 20px;
 }
-.heading{
+
+.heading {
     position: relative;
     top: -15px;
     color: rgb(200, 200, 200);
 }
-p.result-num{
+
+p.result-num {
     width: 9rem;
     aspect-ratio: 1/1;
-    background: linear-gradient(to top, hsla(241, 72%, 46%, 0),hsla(256, 72%, 46%, 1));
+    background: linear-gradient(to top, hsla(241, 72%, 46%, 0), hsla(256, 72%, 46%, 1));
     border-radius: 50%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: rgb(165, 165, 165);
+    color: rgb(200, 200, 200);
     font-size: 14px;
 }
-p.result-num span{
+
+p.result-num span {
     font-size: 50px;
     font-weight: 900;
     color: white;
 }
-h3.heading{
+
+h3.heading {
     color: rgb(247, 247, 247);
     font-size: 20px;
 }
-p.remarks{
+
+p.remarks {
     text-align: center;
     font-size: 15px;
     color: rgb(187, 187, 187);
 }
-.summary{
+
+.summary {
     width: 50%;
     padding: 25px;
     display: flex;
@@ -72,16 +79,22 @@ p.remarks{
     align-items: center;
     gap: 30px;
 }
-h3.summary-heading{
+
+h3.summary-heading {
     align-self: self-start;
 }
-.panels{
+
+.panels {
     width: 100%;
     display: flex;
     flex-direction: column;
     gap: 12px;
 }
-.reaction, .memory, .visual, .verbal{
+
+.reaction,
+.memory,
+.visual,
+.verbal {
     height: fit-content;
     padding: 10px 12px;
     width: 100%;
@@ -90,38 +103,45 @@ h3.summary-heading{
     border-radius: 5px;
     font-weight: 200;
 }
-.reaction{
-    background: hsla(0, 100%, 67%,0.1);
+
+.reaction {
+    background: hsla(0, 100%, 67%, 0.1);
     color: hsla(0, 100%, 67%, 1);
 }
-.memory{
-    background: hsla(39, 100%, 56%,0.1);
-    color: hsla(39, 100%, 56%,1);
+
+.memory {
+    background: hsla(39, 100%, 56%, 0.1);
+    color: hsla(39, 100%, 56%, 1);
 }
-.verbal{
+
+.verbal {
     background: hsla(166, 100%, 37%, 0.1);
     color: hsla(166, 100%, 37%, 1);
 }
-.visual{
+
+.visual {
     background: hsla(234, 85%, 45%, 0.1);
     color: hsla(234, 85%, 45%, 1);
 }
-.summary-head{
+
+.summary-head {
     display: flex;
     gap: 10px;
     font-size: 14px;
     font-weight: 200;
 }
-p.summary-score{
+
+p.summary-score {
     color: rgb(148, 148, 148);
     font-weight: 800;
 }
-p.summary-score span{
+
+p.summary-score span {
     margin-right: 5px;
     color: black;
 }
 
-.continue-btn{
+.continue-btn {
     /* padding: 10px 40px; */
     height: 2.8rem;
     width: 100%;
@@ -132,7 +152,163 @@ p.summary-score span{
     border-radius: 30px;
     background: hsl(224, 30%, 27%);
     font-family: 'Hanken Grotesk', sans-serif;
+    cursor: pointer;
 }
-.continue-btn:hover {
-    background: linear-gradient(to top, hsl(241, 81%, 54%), hsl(252, 100%, 67%));;
+
+.continue-btn:hover,
+.continue-btn:focus-visible {
+    background: linear-gradient(to top, hsl(241, 81%, 54%), hsl(252, 100%, 67%));
+    ;
+}
+
+@media (max-width: 375px){
+    .results-summary {
+            height: 80vh;
+            width: 100vw;
+            display: flex;
+            flex-direction: column;
+            border-radius: 20px;
+            box-shadow: 0px 0px 30px 0px hsl(241, 100%, 89%);
+        }
+    
+        .results {
+            height: fit-content;
+            position: relative;
+            top: -9rem;
+            width: 100%;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            background: linear-gradient(to top, hsl(241, 81%, 54%), hsl(252, 100%, 67%));
+            color: white;
+            border-radius: 0 0 20px 20px;
+        }
+    
+        .heading {
+            position: relative;
+            top: -5px;
+            color: rgb(200, 200, 200);
+        }
+    
+        p.result-num {
+            width: 9rem;
+            aspect-ratio: 1/1;
+            background: linear-gradient(to top, hsla(241, 72%, 46%, 0), hsla(256, 72%, 46%, 1));
+            border-radius: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: rgb(200, 200, 200);
+            font-size: 14px;
+        }
+    
+        p.result-num span {
+            font-size: 50px;
+            font-weight: 900;
+            color: white;
+        }
+    
+        h3.heading {
+            color: rgb(247, 247, 247);
+            font-size: 20px;
+        }
+    
+        p.remarks {
+            text-align: center;
+            font-size: 15px;
+            color: rgb(187, 187, 187);
+        }
+    
+        .summary {
+            width: 100%;
+            position: relative;
+            top: -9rem;
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+        }
+    
+        .panels {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+    
+        .reaction,
+        .memory,
+        .visual,
+        .verbal {
+            height: fit-content;
+            padding: 10px 12px;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            border-radius: 5px;
+            font-weight: 200;
+        }
+    
+        .reaction {
+            background: hsla(0, 100%, 67%, 0.1);
+            color: hsla(0, 100%, 67%, 1);
+        }
+    
+        .memory {
+            background: hsla(39, 100%, 56%, 0.1);
+            color: hsla(39, 100%, 56%, 1);
+        }
+    
+        .verbal {
+            background: hsla(166, 100%, 37%, 0.1);
+            color: hsla(166, 100%, 37%, 1);
+        }
+    
+        .visual {
+            background: hsla(234, 85%, 45%, 0.1);
+            color: hsla(234, 85%, 45%, 1);
+        }
+    
+        .summary-head {
+            display: flex;
+            gap: 10px;
+            font-size: 14px;
+            font-weight: 200;
+        }
+    
+        p.summary-score {
+            color: rgb(148, 148, 148);
+            font-weight: 800;
+        }
+    
+        p.summary-score span {
+            margin-right: 5px;
+            color: black;
+        }
+    
+        .continue-btn {
+            /* padding: 10px 40px; */
+            height: 2.8rem;
+            width: 100%;
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: white;
+            border: 0px;
+            border-radius: 30px;
+            background: hsl(224, 30%, 27%);
+            font-family: 'Hanken Grotesk', sans-serif;
+            cursor: pointer;
+        }
+    
+        .continue-btn:hover,
+        .continue-btn:focus-visible {
+            background: linear-gradient(to top, hsl(241, 81%, 54%), hsl(252, 100%, 67%));
+            ;
+        }
 }
