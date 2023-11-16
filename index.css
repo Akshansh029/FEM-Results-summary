@@ -120,9 +120,6 @@ p.summary-score span{
     margin-right: 5px;
     color: black;
 }
-.summary-tail{
-    width: fit-content;
-}
 
 .continue-btn{
     /* padding: 10px 40px; */
