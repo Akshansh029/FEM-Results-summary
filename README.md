@@ -31,8 +31,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here]([https://your-solution-url.com](https://www.frontendmentor.io/solutions/result-summary-site-using-flexbox-and-grid-Fq-GtSxI1s))
-- Live Site URL: [Add live site URL here]([https://your-live-site-url.com](https://akshansh029.github.io/FEM-Results-summary/))
+- Solution URL: https://www.frontendmentor.io/solutions/result-summary-site-using-flexbox-and-grid-Fq-GtSxI1s
+- Live Site URL: https://akshansh029.github.io/FEM-Results-summary/
 
 ## My process
 I started my process by dividing the layout into divs and started coding by writing HTML code and after completing HTML, I started with CSS from top to bottom flow.
